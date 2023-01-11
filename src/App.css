@@ -1,38 +1,367 @@
+@import url("https://fonts.googleapis.com/css?family=Mukta+Mahee:200,400");
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main ul {
   display: flex;
-  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.main ul li {
+  margin-right: 1rem;
+}
+
+body {
+  /* background-image: url("https://i.redd.it/rcl3mbhqwfq91.jpg"); */
+  margin: 0 auto;
+  /* max-width: 900px; */
+  background-repeat: repeat;
+  background-blend-mode: lighten;
+  background-color: lightcoral;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+nav a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem;
+}
+
+.vertical-center {
+  display: flex;
   align-items: center;
+  min-height: 70vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 25px;
+  border-radius: 0px;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.googlefont {
+  font-family: "Mukta Mahee", sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.googlefontTITLE {
+  font-weight: bold;
+}
+
+.googlefontStatus {
+  font-family: "Mukta Mahee", sans-serif;
+  color: rgb(165, 165, 165);
+  font-weight: bolder;
+}
+
+.googlefontcenter {
+  font-family: "Mukta Mahee", sans-serif;
+}
+
+.leftButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.signupbtn:hover {
+  cursor: pointer;
+}
+
+.signupbtn {
+  font-style: italic;
+}
+
+.parent {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 10px;
+}
+.child {
+  background-color: rgb(234, 234, 234);
+  height: 5px;
+  width: 20%;
+  transition: 100ms;
+  color: transparent;
+  letter-spacing: 3px;
+  font-size: 5px;
+  border-radius: 10%;
+  font-size: 0px;
+  font-weight: bold;
+}
+.child:hover {
+  background-color: transparent;
+  height: 5px;
+  width: 30%;
+  transform: translateX(5%);
+  color: black;
+  letter-spacing: 0px;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.seperatordiv {
+  height: 1px;
+  background-color: rgb(221, 221, 221);
+  width: 230px;
+}
+
+.seperatordiv2 {
+  height: 1px;
+  background-color: rgb(221, 221, 221);
+  width: 530px;
+}
+
+.seperatordivParent {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.signupBtn {
+  margin-left: 2px;
+  margin-right: 5px;
+  margin-top: 7px;
+  padding: 5px;
+  border: 1px solid transparent;
+  background-color: #e5e5e5;
+  color: #649cf4;
+  border-radius: 3px;
+  font-size: 15px;
+  font-family: "Mukta Mahee", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  transition: 200ms;
+}
+
+.signupBtn:hover {
+  border: 1px solid transparent;
+  background-color: #eaf5fe;
+  color: #649cf4;
+}
+
+.card-panel {
+  display: flex;
+  align-items: center;
+  min-height: 75vh;
+  justify-content: center;
+  margin: 25px;
+  background-color: white;
+  box-shadow: 3px 3px 5px rgb(239, 239, 239), -3px -3px 5px rgb(228, 228, 228);
+  border-radius: 2px;
+  flex-wrap: wrap;
+  width: 70vw;
+}
+
+.Signupinput {
+  margin-top: 7px;
+  border: 1px solid transparent;
+  padding: 5px 10px 5px 10px;
+  width: 450px;
+  font-size: 15px;
+  border-radius: 3px;
+  transition: 200ms;
+  background-color: rgb(239, 239, 239);
+  min-width: 100px;
+}
+
+.Signupinput:focus {
+  border: 1px solid transparent;
+  background-color: white;
+  outline: none;
+  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
+  -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
+}
+
+.LoginBtn {
+  margin-left: 2px;
+  margin-right: 5px;
+  margin-top: 7px;
+  padding: 5px;
+  border: 1px solid transparent;
+  background-color: #f7f7f7;
+  color: #649cf4;
+  border-radius: 3px;
+  font-size: 15px;
+  font-family: "Mukta Mahee", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.googlebtn {
+  color: #649cf4;
+  font-family: "Mukta Mahee", sans-serif;
+  padding: 4px 20px 4px 20px;
+  background-color: white;
+  border: 0.5px solid lightgray;
+  border-radius: 5px;
+}
+
+.googlebtn:hover {
+  background-color: rgb(227, 238, 255);
+}
+.modalContainer {
+  border: 1.3px solid lightgray;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  max-width: 500px;
+  min-height: 10%;
+  height: 60%;
+  /* height is what helps the modal */
+  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
+  -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
+  background-color: #ffffff;
+}
+
+.modalBackground {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 9999999;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+}
+.googlebtnForm {
+  color: #649cf4;
+  font-family: "Mukta Mahee", sans-serif;
+  padding: 4px 20px 4px 20px;
+  background-color: white;
+  border: 0.5px solid transparent;
+  border-radius: 5px;
+}
+
+.googlebtnForm:hover {
+  background-color: rgb(227, 238, 255);
+}
+
+@media only screen and (hover: none) and (pointer: coarse) {
+  .Signupinput {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid transparent;
+    padding: 5px 10px 5px 10px;
+    width: 85vw;
+    /* height: 50px; */
+    font-size: 15px;
+    border-radius: 3px;
+    transition: 200ms;
+    background-color: rgb(239, 239, 239);
+    min-width: 100px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .Signupinput:focus {
+    border: 1px solid transparent;
+    background-color: white;
+    outline: none;
+    box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
+    -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
   }
+  .modalContainer {
+    border: 1.3px solid lightgray;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    max-width: 330px;
+    min-height: 100%;
+    box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
+    -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
+    background-color: #ffffff;
+  }
+  .card-panel {
+    display: flex;
+    align-items: center;
+    min-height: 60vh;
+    justify-content: center;
+    margin: 0px;
+    background-color: white;
+    box-shadow: 3px 3px 5px rgb(239, 239, 239), -3px -3px 5px rgb(228, 228, 228);
+    border-radius: 2px;
+    width: 100%;
+  }
+  .vertical-center {
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+    justify-content: center;
+    margin: 10px;
+    border-radius: 0px;
+    padding: 0px;
+  }
+  .googlebtn {
+    color: #649cf4;
+    font-family: "Mukta Mahee", sans-serif;
+    padding: 4px 20px 4px 20px;
+    background-color: white;
+    border: 0.5px solid lightgray;
+    border-radius: 5px;
+  }
+  .modalBackground {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 9999999;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+  }
+  .modalContainer {
+    border: 1.3px solid lightgray;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    max-width: 500px;
+    min-height: 10%;
+    height: 60%;
+    /* height is what helps the modal */
+    box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
+    -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
+    background-color: #ffffff;
+  }
+}
+
+.Advicebanner {
+  height: 30vh;
+  width: 100%;
+}
+
+.loading {
+  color: green;
+}
+
+.copyToClipboardBTN {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: #c7ab0d;
+  text-decoration: underline;
+}
+
+.Cards {
+  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
+  -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.62);
 }
