@@ -1,45 +1,43 @@
-import "../App.css";
-import { useState, useEffect } from "react";
+import "../App.css"
+import { useState, useEffect } from "react"
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
-} from "firebase/auth";
-import { auth } from "../Firebase-config";
-import { useNavigate } from "react-router-dom";
+} from "firebase/auth"
+import { auth } from "../Firebase-config"
+import { useNavigate } from "react-router-dom"
 //design
-//https://materializecss.com/
-import "../App.css";
+import "../App.css"
 //design
-import { M, options } from "materialize-css";
-import axios from "axios";
+import { M, options } from "materialize-css"
 
 function CreateUser() {
-  const [registerEmail, setRegisterEmail] = useState("");
-  const [registerPassword, setRegisterPassword] = useState("");
-  const [user, setUser] = useState({});
-  const navigate = useNavigate();
+  const [registerEmail, setRegisterEmail] = useState("")
+  const [registerPassword, setRegisterPassword] = useState("")
+  const [user, setUser] = useState({})
+  const navigate = useNavigate()
 
-  const [isShown, setIsShown] = useState(false);
+  const [isShown, setIsShown] = useState(false)
   const handleClick = (event) => {
     // 👇️ toggle shown state
-    setIsShown((current) => !current);
+    setIsShown((current) => !current)
 
     // 👇️ or simply set it to true
     // setIsShown(true);
-  };
+  }
 
   useEffect(() => {
     document.addEventListener("DOMContentLoaded", function () {
-      var elems = document.querySelectorAll(".tooltipped");
-      var instances = M.Tooltip.init(elems, options);
-    });
-  }, []);
+      var elems = document.querySelectorAll(".tooltipped")
+      var instances = M.Tooltip.init(elems, options)
+    })
+  }, [])
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-  }, []);
+      setUser(currentUser)
+    })
+  }, [])
 
   const register = async () => {
     try {
@@ -47,16 +45,16 @@ function CreateUser() {
         auth,
         registerEmail,
         registerPassword
-      );
-      console.log(user);
-      alert("Please sign in again to start");
-      navigate("/");
+      )
+      console.log(user)
+      alert("Please sign in again to start")
+      navigate("/")
     } catch (error) {
-      console.log(error.message);
-      alert(error.message);
-      setIsShown((current) => !current);
+      console.log(error.message)
+      alert(error.message)
+      setIsShown((current) => !current)
     }
-  };
+  }
 
   return (
     <div style={{ textAlign: "center" }}>
@@ -71,7 +69,7 @@ function CreateUser() {
                   className="Signupinput"
                   placeholder="Email..."
                   onChange={(event) => {
-                    setRegisterEmail(event.target.value);
+                    setRegisterEmail(event.target.value)
                   }}
                 />
               </div>
@@ -81,7 +79,7 @@ function CreateUser() {
                   placeholder="Password..."
                   type="password"
                   onChange={(event) => {
-                    setRegisterPassword(event.target.value);
+                    setRegisterPassword(event.target.value)
                   }}
                 />
               </div>
@@ -93,8 +91,8 @@ function CreateUser() {
                   flexDirection: "row",
                 }}
                 onClick={() => {
-                  register();
-                  handleClick();
+                  register()
+                  handleClick()
                 }}
                 className="googlebtn"
               >
@@ -111,7 +109,7 @@ function CreateUser() {
             >
               <button
                 onClick={() => {
-                  navigate("/");
+                  navigate("/")
                 }}
                 className="googlebtn"
               >
@@ -127,7 +125,7 @@ function CreateUser() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default CreateUser;
+export default CreateUser
